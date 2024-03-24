@@ -1,0 +1,13 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+    <Dialog title="comentario" draggable="true">
+        <content>
+
+            <FeedInput placeholder="Registrar algo aqui..." buttonTooltip="Enviar" id="input0" icon="sap-icon://post" showIcon="true" post="onPost"/>
+
+        </content>
+        <buttons>
+           <Button text="Fechar" press="onCloseDialog"/>
+        </buttons>
+       
+    </Dialog>
+</core:FragmentDefinition>

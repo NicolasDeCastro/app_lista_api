@@ -1,0 +1,145 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="project1.controller.S1" displayBlock="true"><Page id="page" title="{i18n>title}">
+        <content>
+        
+     
+        <Table items="{path: '/Products', sorter: [{path: 'ProductName', descending: false}]}" noDataText="Drop column list items here and columns in the area above" id="table0">
+        
+     
+            <items>
+                <ColumnListItem type="Active" id="item0">
+        
+     
+                    <cells>
+        
+     
+                        <Text text="{ProductName}" id="text2"/>
+        
+     
+                        <Text text="{UnitsInStock}" id="text4"/>
+        
+     
+                        <ObjectNumber number="{parts:[{path:'UnitPrice'}], type : 'sap.ui.model.type.Currency' , formatOptions :{showMeasure : true}}" state="{= ${UnitPrice} &gt; 100 ? 'Error' : ${UnitPrice} &gt; 50 ? 'Warning' : 'Success'}" unit="R$" id="number0" inverted="true"/>
+        
+     
+                        <RatingIndicator xmlns="sap.m" maxValue="5" value="0" id="indicator0" iconSize="15px"/>
+
+
+                        <Button  text="add" id="button0" icon="sap-icon://comment" type="Neutral" press="onPress"/>
+     
+                      </cells>
+        
+     
+                </ColumnListItem>
+        
+     
+            </items>
+        
+     
+            <columns>
+        
+     
+                <Column id="column0" mergeDuplicates="true">
+        
+     
+                    <header>
+        
+     
+                        <Label text="Nome Produto" id="label0"/>
+        
+     
+                    </header>
+        
+     
+                </Column>
+        
+     
+                <Column id="column1">
+        
+     
+                    <header>
+        
+     
+                        <Label text="Em estoque" id="label1"/>
+        
+     
+                    </header>
+        
+     
+                </Column>
+        
+     
+                <Column id="column2">
+        
+     
+                    <header>
+        
+     
+                        <Label text="Preço Unitario" id="label2"/>
+        
+     
+                    </header>
+        
+     
+                </Column>
+        
+     
+                <Column id="column3">
+        
+     
+                    <header>
+        
+     
+                        <Text text="Classificação" id="text6"/>
+        
+     
+                    </header>
+        
+     
+                </Column>
+        
+     
+                <Column id="column0_1710800664528">
+        
+     
+                    <header>
+        
+     
+                        <Text text="Comentario" id="text3"/>
+        
+     
+                    </header>
+        
+     
+                </Column></columns>
+        
+     
+            <headerToolbar>
+        
+     
+                <Toolbar width="100%" id="toolbar1">
+        
+     
+                    <content>
+        
+     
+                        <Text xmlns="sap.m" text="Text" id="text4_1710794295842"/>
+        
+     
+                        <ToolbarSeparator id="separator1"/>
+        
+     
+                        <SearchField xmlns="sap.m" placeholder="Search for ..." id="field1" search="onSearch"/>
+        
+     
+                    </content>
+        
+     
+                </Toolbar>
+        
+     
+            </headerToolbar></Table>
+        
+     
+        </content>
+    </Page>
+</mvc:View>
